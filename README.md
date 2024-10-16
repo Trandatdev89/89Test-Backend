@@ -14,4 +14,4 @@ Cách sử dụng dự án local như sau:
 "DATABASE_PORT" : "15510",
 "DATABASE_USERNAME" : "avnadmin",
 "DATABASE_PASSWORD" : "AVNS_6kwbf0N_I5maEe146UP",
-"DATABASE_NAME" : "realestate"
+"DATABASE_NAME" : "89Test"

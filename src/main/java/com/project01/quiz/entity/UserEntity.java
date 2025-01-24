@@ -62,10 +62,6 @@ public class UserEntity implements UserDetails {
         return authorities;
     }
 
-    @Override
-    public String getUsername() {
-        return "";
-    }
 
     @Override
     public boolean isAccountNonExpired() {

@@ -44,9 +44,9 @@ public class UserServicesImpl implements UserServices {
     @Override
     public void updateUser(Long id, UserResponseDTO userResponseDTO) {
         UserEntity user = userRepository.findById(id).orElseThrow(()->new AppException(ErrorCode.USER_NOTFOUND));
-        user=modelMapper.map(userResponseDTO,UserEntity.class);
-        user.setId(id);
-        user.setPassword(passwordEncoder.encode(userResponseDTO.getPassword()));
+        if(passwordEncoder.matches(userResponseDTO.getPassword(),user.getPassword())) {
+            user.setPassword(passwordEncoder.encode(userResponseDTO.getPasswordNew()));
+        }
         userRepository.save(user);
     }
 

@@ -64,8 +64,6 @@ public class TopicServicesImpl implements TopicServices {
         topicEntity.setThumnail(fileName);
         TopicEntity topic= topicRepository.save(topicEntity);
         TopicResponse topicResponse = modelMapper.map(topic, TopicResponse.class);
-        String thumnail="http://localhost:"+port+"/avatar/"+fileName;
-        topicResponse.setThumnail(thumnail);
         return topicResponse;
     }
 

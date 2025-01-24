@@ -21,6 +21,8 @@ public class UserResponseDTO {
 
     private String password;
 
+    private String passwordNew;
+
     private String fullname;
 
     private String email;

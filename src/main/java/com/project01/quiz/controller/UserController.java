@@ -31,7 +31,7 @@ public class UserController {
 
     @PatchMapping("/{id}")
     @PreAuthorize("hasAnyRole('ADMIN','USER')")
-    public ApiResponse updateUser(@PathVariable Long id,@RequestBody UserResponseDTO userResponseDTO) {
+    public ApiResponse updatePassword(@PathVariable Long id,@RequestBody UserResponseDTO userResponseDTO) {
         userServices.updateUser(id,userResponseDTO);
         return ApiResponse.<UserResponseDTO>builder()
                 .code(HttpStatus.OK)

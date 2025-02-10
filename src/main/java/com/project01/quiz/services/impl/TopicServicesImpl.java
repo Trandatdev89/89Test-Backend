@@ -43,8 +43,6 @@ public class TopicServicesImpl implements TopicServices {
         List<TopicResponse> topicResponses = new ArrayList<>();
         for (TopicEntity topicEntity : topicEntities) {
             TopicResponse topicResponse = modelMapper.map(topicEntity, TopicResponse.class);
-            String thumnail= ServletUriComponentsBuilder.fromCurrentContextPath().toUriString()+"/avatar/"+topicEntity.getThumnail();
-            topicResponse.setThumnail(thumnail);
             topicResponses.add(topicResponse);
         }
         return topicResponses;
